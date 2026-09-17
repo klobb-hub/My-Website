@@ -1,0 +1,332 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="styles/styles.css" />
+    <link rel="stylesheet" href="styles/survey-styles.css" />
+    <link rel="icon" type="image/png" href="img/eleous.png" />
+    <title>Elias Povlsen | Survey Example</title>
+  </head>
+  <body>
+    <header>
+      <a href="/" class="brand">
+        <img
+          src="img/eleous.png"
+          alt="Profile image of Elias Povlsen"
+          class="logo-elias"
+        />
+        <p><strong>Elias Povlsen</strong></p>
+      </a>
+
+      <nav aria-label="Main navigation">
+        <ul>
+          <li><a href="portfolio.html">Portfolio</a></li>
+          <li><a href="interests.html">Interests</a></li>
+          <li><a href="cv.html">CV</a></li>
+          <li><a href="about.html">About</a></li>
+        </ul>
+      </nav>
+    </header>
+
+    <main>
+      <h1>Survey Example</h1>
+      <p>
+        An assignment we had to make using as many elements for forms as
+        possible.
+      </p>
+      <p>THE FORM DOES NOT SEND YOUR PERSONAL INFORMATION ANYWHERE!</p>
+      <form action="/submit-survey" method="post" enctype="multipart/form-data">
+        <!-- Personal information -->
+        <div class="content-grid">
+          <fieldset>
+            <legend>Personal Information</legend>
+
+            <label for="name">Full Name</label>
+            <input
+              autofocus
+              type="text"
+              id="name"
+              name="name"
+              placeholder="Enter your name"
+              required
+            />
+
+            <label for="email">Email Address</label>
+            <input
+              type="email"
+              id="email"
+              name="email"
+              placeholder="you@example.com"
+              required
+            />
+
+            <label for="phone">Phone Number</label>
+            <input
+              type="tel"
+              id="phone"
+              name="phone"
+              placeholder="+45 12 34 56 78"
+            />
+
+            <label for="website">Portfolio / Website</label>
+            <input
+              type="url"
+              id="website"
+              name="website"
+              placeholder="https://example.com"
+            />
+
+            <label for="experience-years"
+              >Years of Web Development Experience</label
+            >
+            <input
+              type="number"
+              id="experience-years"
+              name="experience-years"
+              min="0"
+              max="50"
+              value="0"
+            />
+          </fieldset>
+
+          <!-- Experience -->
+          <fieldset>
+            <legend>Web Development Experience</legend>
+
+            <p>What is your experience level?</p>
+
+            <div class="radio-group">
+              <label>
+                <input type="radio" name="experience" value="beginner" />
+                Beginner
+              </label>
+
+              <label>
+                <input type="radio" name="experience" value="intermediate" />
+                Intermediate
+              </label>
+
+              <label>
+                <input type="radio" name="experience" value="advanced" />
+                Advanced
+              </label>
+
+              <label>
+                <input type="radio" name="experience" value="professional" />
+                Professional
+              </label>
+            </div>
+
+            <p>Which technologies have you used?</p>
+
+            <div class="checkbox-group">
+              <label>
+                <input type="checkbox" name="technology" value="html" />
+                HTML
+              </label>
+
+              <label>
+                <input type="checkbox" name="technology" value="css" />
+                CSS
+              </label>
+
+              <label>
+                <input type="checkbox" name="technology" value="javascript" />
+                JavaScript
+              </label>
+
+              <label>
+                <input type="checkbox" name="technology" value="java" />
+                Java
+              </label>
+
+              <label>
+                <input type="checkbox" name="technology" value="python" />
+                Python
+              </label>
+
+              <label>
+                <input type="checkbox" name="technology" value="csharp" />
+                C#
+              </label>
+            </div>
+          </fieldset>
+
+          <!-- Website preferences -->
+          <fieldset>
+            <legend>Website Preferences</legend>
+
+            <label for="website-type"
+              >What type of website do you prefer?</label
+            >
+
+            <select id="website-type" name="website-type">
+              <option value="">-- Select an option --</option>
+              <option value="portfolio">Portfolio</option>
+              <option value="business">Business</option>
+              <option value="blog">Blog</option>
+              <option value="ecommerce">Online Store</option>
+              <option value="social">Social Media</option>
+              <option value="gaming">Gaming</option>
+            </select>
+
+            <label for="favorite-website"
+              >Search for your favorite website</label
+            >
+            <input
+              type="search"
+              id="favorite-website"
+              name="favorite-website"
+              placeholder="Enter a website"
+            />
+
+            <label for="color">What is your favorite website color?</label>
+            <input type="color" id="color" name="color" value="#3B82F6" />
+
+            <label for="design-importance">
+              How important is visual design to you?
+            </label>
+
+            <div class="range-container">
+              <span>Not important</span>
+
+              <input
+                type="range"
+                id="design-importance"
+                name="design-importance"
+                min="1"
+                max="10"
+                value="5"
+              />
+
+              <span>Very important</span>
+            </div>
+          </fieldset>
+
+          <!-- Schedule -->
+          <fieldset>
+            <legend>Project Planning</legend>
+
+            <label for="project-date">Preferred Project Date</label>
+            <input type="date" id="project-date" name="project-date" />
+
+            <label for="meeting-time">Preferred Meeting Time</label>
+            <input type="time" id="meeting-time" name="meeting-time" />
+
+            <label for="deadline">Project Deadline</label>
+            <input type="datetime-local" id="deadline" name="deadline" />
+          </fieldset>
+
+          <!-- File upload -->
+          <fieldset>
+            <legend>Upload</legend>
+
+            <label for="project-file"> Upload a project or design </label>
+
+            <input
+              type="file"
+              id="project-file"
+              name="project-file"
+              accept=".jpg,.jpeg,.png,.pdf"
+            />
+          </fieldset>
+
+          <!-- Feedback -->
+          <fieldset>
+            <legend>Your Opinion</legend>
+
+            <label for="ideal-website">
+              What would your ideal website look like?
+            </label>
+
+            <textarea
+              id="ideal-website"
+              name="ideal-website"
+              rows="6"
+              placeholder="Tell us about your ideal website..."
+            ></textarea>
+
+            <label for="improvements"> What could websites do better? </label>
+
+            <textarea
+              id="improvements"
+              name="improvements"
+              rows="6"
+              placeholder="Share your ideas..."
+            ></textarea>
+          </fieldset>
+        </div>
+        <!-- Buttons -->
+        <div class="buttons">
+          <button type="submit">Submit Survey</button>
+          <button type="reset">Reset</button>
+        </div>
+      </form>
+    </main>
+
+    <footer>
+      <div class="footer-sections">
+        <div class="contact">
+          <p><strong>Contact Me</strong></p>
+
+          <p>
+            <a href="mailto:elias@povlsen.dev">
+              <img src="img/email.png" alt="email" />
+              elias@povlsen.dev
+            </a>
+          </p>
+
+          <p>
+            <span>
+              <img src="img/location.png" alt="location" />
+              Aabybro, Denmark
+            </span>
+          </p>
+        </div>
+
+        <div class="socials">
+          <p><strong>Find Me Online</strong></p>
+          <ul>
+            <li>
+              <a
+                href="https://instagram.com/eliaspovlsen"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                <img src="img/instagram.png" alt="instagram" />
+                Instagram
+              </a>
+            </li>
+
+            <li>
+              <a
+                href="https://www.linkedin.com/in/elias-povlsen-b66466187/"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                <img src="img/linkedin.png" alt="linkedin" />
+                LinkedIn
+              </a>
+            </li>
+
+            <li>
+              <a
+                href="https://github.com/klobb-hub"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                <img src="img/github.png" alt="github" />
+                GitHub
+              </a>
+            </li>
+          </ul>
+        </div>
+      </div>
+
+      <p class="copyright">
+        <small>&copy; 2026 Elias Povlsen. All Rights Reserved.</small>
+      </p>
+    </footer>
+  </body>
+</html>

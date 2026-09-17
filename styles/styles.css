@@ -1,0 +1,474 @@
+/* =========================
+   General styling
+   ========================= */
+
+:root {
+  --dark: #0f172a;
+  --blue: #60a5fa;
+  --background: #f8fafc;
+  --card: #ffffff;
+  --text: #1e293b;
+  --border: #e2e8f0;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  margin: 0;
+  font-family: Arial, sans-serif;
+  line-height: 1.6;
+  color: var(--text);
+  background: var(--background);
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+}
+
+a {
+  color: inherit;
+}
+
+a:hover {
+  color: var(--blue);
+}
+
+a:focus-visible {
+  outline: 2px solid var(--blue);
+  outline-offset: 3px;
+}
+
+/* =========================
+   Header
+   ========================= */
+
+header {
+  background: var(--dark);
+  color: white;
+  padding: 0.5rem 2rem;
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+  gap: 0.5rem;
+}
+
+.brand {
+  display: flex;
+  align-items: center;
+
+  gap: 0.75rem;
+
+  color: white;
+  text-decoration: none;
+}
+
+.brand p {
+  margin: 0;
+}
+
+.logo-elias {
+  width: 48px;
+  height: 48px;
+
+  border-radius: 50%;
+  object-fit: cover;
+}
+
+/* =========================
+   Navigation
+   ========================= */
+
+nav ul {
+  display: flex;
+  flex-wrap: wrap;
+
+  justify-content: center;
+
+  gap: 0.5rem;
+
+  list-style: none;
+
+  padding: 0;
+  margin: 0;
+}
+
+nav a {
+  display: block;
+
+  padding: 0.5rem 0.75rem;
+
+  color: white;
+  text-decoration: none;
+}
+
+/* =========================
+   Main content
+   ========================= */
+
+main {
+  width: min(90%, 1200px);
+
+  min-height: 60vh;
+
+  margin-inline: auto;
+
+  padding: 1rem 0;
+}
+
+section {
+  margin-bottom: 3rem;
+}
+
+h1,
+h2 {
+  line-height: 1.2;
+}
+
+/* =========================
+   Cards and grids
+   ========================= */
+
+.content-grid {
+  display: grid;
+
+  grid-template-columns: 1fr;
+
+  gap: 1.5rem;
+}
+
+.card {
+  min-width: 0;
+
+  padding: 1.25rem;
+
+  background: var(--card);
+
+  border: 1px solid var(--border);
+  border-radius: 8px;
+}
+
+/* =========================
+   Tables
+   ========================= */
+
+.table-container {
+  width: 100%;
+
+  overflow-x: auto;
+
+  -webkit-overflow-scrolling: touch;
+}
+
+.table-container table {
+  width: 100%;
+
+  border-collapse: collapse;
+}
+
+caption {
+  margin-bottom: 0.5rem;
+
+  font-size: 0.9rem;
+
+  opacity: 0.7;
+
+  text-align: left;
+}
+
+th,
+td {
+  padding: 0.75rem;
+
+  text-align: left;
+
+  border-bottom: 1px solid var(--border);
+
+  overflow-wrap: break-word;
+}
+
+.scroll-hint {
+  display: block;
+
+  margin-top: 0.4rem;
+
+  text-align: left;
+
+  opacity: 0.5;
+}
+
+/* =========================
+   Lists
+   ========================= */
+
+.interests-list {
+  display: flex;
+  flex-wrap: wrap;
+
+  gap: 0.75rem;
+
+  list-style: none;
+
+  padding: 0;
+
+  margin: 1.5rem 0;
+}
+
+.interests-list li {
+  padding: 0.6rem 1rem;
+
+  background: var(--card);
+
+  border: 1px solid var(--border);
+  border-radius: 8px;
+}
+
+/* =========================
+   Portfolio
+   ========================= */
+
+.project {
+  min-width: 0;
+
+  padding: 1.5rem;
+
+  background: var(--card);
+
+  border: 1px solid var(--border);
+  border-radius: 8px;
+
+  display: grid;
+
+  gap: 1.5rem;
+}
+
+.project img {
+  width: 100%;
+
+  aspect-ratio: 16 / 9;
+
+  object-fit: cover;
+
+  border-radius: 6px;
+}
+
+/* =========================
+   Footer
+   ========================= */
+
+footer {
+  background: var(--dark);
+
+  color: white;
+
+  padding: 1rem 0;
+}
+
+.footer-sections {
+  width: min(90%, 1100px);
+
+  margin-inline: auto;
+
+  display: grid;
+
+  grid-template-columns: 1fr;
+
+  gap: 1rem;
+
+  text-align: center;
+}
+
+/* Footer links */
+
+.contact a,
+.contact span,
+.socials a {
+  display: flex;
+
+  align-items: center;
+  justify-content: center;
+
+  gap: 0.5rem;
+
+  width: fit-content;
+
+  margin-inline: auto;
+
+  color: white;
+
+  text-decoration: none;
+}
+
+.contact a:hover,
+.socials a:hover {
+  color: var(--blue);
+}
+
+/* Footer icons */
+
+.contact img,
+.socials img {
+  width: 20px;
+  height: 20px;
+
+  flex-shrink: 0;
+}
+
+/* Social list */
+
+.socials ul {
+  list-style: none;
+
+  padding: 0;
+
+  margin: 0;
+}
+
+.socials li {
+  margin-bottom: 0.5rem;
+}
+
+/* Footer headings */
+
+.contact > p:first-child,
+.socials > p:first-child {
+  margin-top: 0;
+}
+
+/* Copyright */
+
+.copyright {
+  width: min(90%, 1100px);
+
+  margin: 0.5rem auto 0;
+
+  padding-top: 0.2rem;
+
+  border-top: 1px solid var(--border);
+
+  text-align: center;
+
+  opacity: 0.5;
+}
+
+/* =========================
+   Small mobile - 375px
+   ========================= */
+
+@media (max-width: 375px) {
+  main {
+    width: 95%;
+  }
+
+  header {
+    padding-inline: 1rem;
+  }
+
+  nav ul {
+    gap: 0.25rem;
+  }
+
+  nav a {
+    padding: 0.3rem 0.4rem;
+  }
+
+  .card,
+  .project {
+    padding: 1rem;
+  }
+
+  th,
+  td {
+    padding: 0.5rem;
+  }
+
+  .copyright {
+    width: 92%;
+  }
+
+  .footer-sections {
+    width: 92%;
+
+    gap: 1rem;
+  }
+}
+
+/* =========================
+   Tablet - 768px
+   ========================= */
+
+@media (min-width: 768px) {
+  /* Header */
+
+  header {
+    flex-direction: row;
+
+    justify-content: space-between;
+
+    align-items: center;
+  }
+
+  nav ul {
+    justify-content: flex-end;
+  }
+
+  /* Footer */
+
+  .footer-sections {
+    grid-template-columns: 1fr 1fr;
+
+    /*
+      Keep the contents centered inside
+      each individual grid column.
+    */
+    text-align: center;
+  }
+
+  .contact a,
+  .contact span,
+  .socials a {
+    /*
+      Keep each link centered instead
+      of moving it to the left.
+    */
+    margin-inline: auto;
+
+    justify-content: center;
+  }
+
+  /* Tables */
+
+  .scroll-hint {
+    display: none;
+  }
+}
+
+/* =========================
+   Desktop - 1024px
+   ========================= */
+
+@media (min-width: 1024px) {
+  main {
+    width: 95%;
+
+    max-width: 1200px;
+
+    padding: 0.5rem 0;
+  }
+
+  .brand {
+    justify-content: flex-start;
+  }
+
+  .content-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
