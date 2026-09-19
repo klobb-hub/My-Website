@@ -38,11 +38,21 @@ input,
 select,
 textarea {
   width: 100%;
+  max-width: 100%;
   padding: 0.75rem;
   border: 1px solid var(--border);
   border-radius: 6px;
   font: inherit;
   background-color: var(--card);
+}
+
+input[type="date"],
+input[type="time"] {
+    width: 100%;
+    max-width: 100%;
+    padding: 15px;
+    border: 2px solid var(--border);
+    box-sizing: border-box;
 }
 
 input:focus,
