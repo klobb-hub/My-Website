@@ -1,69 +1,108 @@
 /* =========================
-   General styling
+   Survey Form
    ========================= */
 
-:root {
-  --dark: #0f172a;
-  --blue: #60a5fa;
-  --background: #f8fafc;
-  --card: #ffffff;
-  --text: #1e293b;
-  --border: #e2e8f0;
+form {
+  width: 100%;
+  max-width: 100%;
+  min-width: 0;
 }
 
-* {
-  box-sizing: border-box;
-}}
+/* =========================
+   Form Grid
+   ========================= */
+
+.content-grid {
+  width: 100%;
+  max-width: 100%;
+  min-width: 0;
+}
 
 /* =========================
-   Form
+   Fieldsets
    ========================= */
 
 fieldset {
+  width: 100%;
+  max-width: 100%;
+  min-width: 0;
+
+  box-sizing: border-box;
+
   border: 1px solid var(--border);
   border-radius: 10px;
+
   background-color: var(--card);
+
   padding: 1.25rem;
+
   box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
-  min-width: 0;
 }
 
 legend {
   padding: 0 0.5rem;
+
   font-size: 1.2rem;
   font-weight: bold;
+
   color: var(--text);
 }
 
 /* =========================
-   Labels & Inputs
+   Labels
    ========================= */
 
 label {
   display: block;
+
   margin-top: 1rem;
   margin-bottom: 0.4rem;
+
   font-weight: 600;
 }
+
+/* =========================
+   Inputs
+   ========================= */
 
 input,
 select,
 textarea {
+  display: block;
+
   width: 100%;
   max-width: 100%;
+  min-width: 0;
+
+  box-sizing: border-box;
+
   padding: 0.75rem;
+
   border: 1px solid var(--border);
   border-radius: 6px;
+
   font: inherit;
+
   background-color: var(--card);
 }
 
+/* Date, time and datetime inputs */
+
 input[type="date"],
-input[type="time"] {
+input[type="time"],
+input[type="datetime-local"] {
   width: 100%;
-  padding: 15px;
-  border: 2px solid var(--border);
+  max-width: 100%;
+  min-width: 0;
+
+  box-sizing: border-box;
+
+  padding: 0.75rem;
 }
+
+/* =========================
+   Input Focus
+   ========================= */
 
 input:focus,
 select:focus,
@@ -72,8 +111,13 @@ textarea:focus {
   border-color: var(--border);
 }
 
+/* =========================
+   Textarea
+   ========================= */
+
 textarea {
   resize: vertical;
+  min-height: 120px;
 }
 
 /* =========================
@@ -83,22 +127,36 @@ textarea {
 .radio-group,
 .checkbox-group {
   display: grid;
+
   grid-template-columns: repeat(2, 1fr);
+
   gap: 0.75rem;
+
+  width: 100%;
+  max-width: 100%;
 }
 
 .radio-group label,
 .checkbox-group label {
   display: flex;
+
   align-items: center;
+
   gap: 0.5rem;
+
   margin: 0;
+
   font-weight: normal;
 }
 
 .radio-group input,
 .checkbox-group input {
   width: auto;
+  max-width: none;
+
+  min-width: auto;
+
+  margin: 0;
 }
 
 /* =========================
@@ -107,19 +165,30 @@ textarea {
 
 .range-container {
   display: grid;
+
   grid-template-columns: auto 1fr auto;
+
   align-items: center;
+
   gap: 1rem;
+
+  width: 100%;
+  max-width: 100%;
 }
 
 .range-container input {
+  width: 100%;
+  min-width: 0;
+
   padding: 0;
 }
 
 #design-importance {
   width: 100%;
   height: 8px;
+
   border-radius: 5px;
+
   accent-color: var(--text);
 }
 
@@ -128,22 +197,27 @@ textarea {
    ========================= */
 
 input[type="color"] {
+  width: 100%;
   height: 50px;
+
   padding: 0.25rem;
+
   cursor: pointer;
 }
 
 /* =========================
-   File Picker
+   File Upload
    ========================= */
-
-#project-file {
-  cursor: pointer;
-  width: fit-content;
-}
 
 .file-upload {
   width: 100%;
+  max-width: 100%;
+
+  box-sizing: border-box;
+}
+
+#project-file {
+  cursor: pointer;
 }
 
 /* =========================
@@ -152,17 +226,23 @@ input[type="color"] {
 
 .buttons {
   display: flex;
+
   justify-content: center;
+
   gap: 1rem;
+
   margin: 1rem;
 }
 
 button {
   border: none;
   border-radius: 6px;
+
   padding: 0.8rem 2rem;
+
   font-size: 1rem;
   font-weight: bold;
+
   cursor: pointer;
 }
 
@@ -174,6 +254,7 @@ button[type="submit"] {
 button[type="submit"]:hover {
   background-color: white;
   color: var(--dark);
+
   transition: 0.5s;
 }
 
@@ -185,6 +266,7 @@ button[type="reset"] {
 button[type="reset"]:hover {
   background-color: var(--dark);
   color: white;
+
   transition: 0.5s;
 }
 
@@ -192,8 +274,28 @@ button[type="reset"]:hover {
    Mobile
    ========================= */
 
-@media (max-width: 600px) {
+@media (max-width: 767px) {
+  main {
+    width: 92%;
+    max-width: 100%;
+  }
+
+  form {
+    width: 100%;
+    max-width: 100%;
+  }
+
+  .content-grid {
+    width: 100%;
+    max-width: 100%;
+
+    grid-template-columns: 1fr;
+  }
+
   fieldset {
+    width: 100%;
+    max-width: 100%;
+
     padding: 1rem;
   }
 
@@ -202,12 +304,43 @@ button[type="reset"]:hover {
     grid-template-columns: 1fr;
   }
 
+  .range-container {
+    grid-template-columns: 1fr;
+
+    gap: 0.5rem;
+  }
+
+  .range-container input {
+    width: 100%;
+  }
+
   .buttons {
     flex-direction: column;
+
     align-items: stretch;
+
+    margin-inline: 0;
   }
 
   button {
     width: 100%;
+  }
+}
+
+/* =========================
+   Small Mobile
+   ========================= */
+
+@media (max-width: 375px) {
+  main {
+    width: 94%;
+  }
+
+  fieldset {
+    padding: 0.85rem;
+  }
+
+  legend {
+    font-size: 1.1rem;
   }
 }
