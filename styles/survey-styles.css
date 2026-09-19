@@ -7,13 +7,12 @@
    ========================= */
 
 fieldset {
-  border: 1px solid var(border);
+  border: 1px solid var(--border);
   border-radius: 10px;
-  background-color: var(--cards);
-  padding: 1.5rem;
+  background-color: var(--card);
+  padding: 1.25rem;
   box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
   min-width: 0;
-  padding: 1.25rem;
 }
 
 legend {
@@ -48,11 +47,9 @@ textarea {
 
 input[type="date"],
 input[type="time"] {
-    width: 100%;
-    max-width: 100%;
-    padding: 15px;
-    border: 2px solid var(--border);
-    box-sizing: border-box;
+  width: 100%;
+  padding: 15px;
+  border: 2px solid var(--border);
 }
 
 input:focus,
@@ -132,9 +129,9 @@ input[type="color"] {
   width: fit-content;
 }
 
-.fike-upload {
+.file-upload {
   width: 100%;
-  }
+}
 
 /* =========================
    Buttons
@@ -176,4 +173,28 @@ button[type="reset"]:hover {
   background-color: var(--dark);
   color: white;
   transition: 0.5s;
+}
+
+/* =========================
+   Mobile
+   ========================= */
+
+@media (max-width: 600px) {
+  fieldset {
+    padding: 1rem;
+  }
+
+  .radio-group,
+  .checkbox-group {
+    grid-template-columns: 1fr;
+  }
+
+  .buttons {
+    flex-direction: column;
+    align-items: stretch;
+  }
+
+  button {
+    width: 100%;
+  }
 }
