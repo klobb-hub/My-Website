@@ -1,6 +1,19 @@
+/* =========================
+   General styling
+   ========================= */
+
+:root {
+  --dark: #0f172a;
+  --blue: #60a5fa;
+  --background: #f8fafc;
+  --card: #ffffff;
+  --text: #1e293b;
+  --border: #e2e8f0;
+}
+
 * {
   box-sizing: border-box;
-}
+}}
 
 /* =========================
    Form
