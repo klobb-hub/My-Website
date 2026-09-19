@@ -118,6 +118,10 @@ input[type="color"] {
   width: fit-content;
 }
 
+.fike-upload {
+  width: fit-container;
+  }
+
 /* =========================
    Buttons
    ========================= */
