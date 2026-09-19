@@ -8,6 +8,7 @@ form {
   min-width: 0;
 }
 
+
 /* =========================
    Form Grid
    ========================= */
@@ -17,6 +18,7 @@ form {
   max-width: 100%;
   min-width: 0;
 }
+
 
 /* =========================
    Fieldsets
@@ -48,6 +50,7 @@ legend {
   color: var(--text);
 }
 
+
 /* =========================
    Labels
    ========================= */
@@ -61,8 +64,9 @@ label {
   font-weight: 600;
 }
 
+
 /* =========================
-   Inputs
+   General Inputs
    ========================= */
 
 input,
@@ -86,19 +90,43 @@ textarea {
   background-color: var(--card);
 }
 
-/* Date, time and datetime inputs */
+
+/* =========================
+   Date & Time Inputs
+   ========================= */
+
+/*
+   These inputs need some extra handling on
+   iPhone/Safari because the native date/time
+   controls can otherwise become wider than
+   their parent container.
+*/
 
 input[type="date"],
 input[type="time"],
 input[type="datetime-local"] {
+  display: block;
+
   width: 100%;
   max-width: 100%;
   min-width: 0;
+  min-inline-size: 0;
 
   box-sizing: border-box;
 
   padding: 0.75rem;
+
+  border: 1px solid var(--border);
+  border-radius: 6px;
+
+  font: inherit;
+
+  background-color: var(--card);
+
+  -webkit-appearance: none;
+  appearance: none;
 }
+
 
 /* =========================
    Input Focus
@@ -108,8 +136,10 @@ input:focus,
 select:focus,
 textarea:focus {
   outline: 2px solid var(--border);
+
   border-color: var(--border);
 }
+
 
 /* =========================
    Textarea
@@ -117,8 +147,10 @@ textarea:focus {
 
 textarea {
   resize: vertical;
+
   min-height: 120px;
 }
+
 
 /* =========================
    Radio Buttons & Checkboxes
@@ -153,11 +185,11 @@ textarea {
 .checkbox-group input {
   width: auto;
   max-width: none;
-
   min-width: auto;
 
   margin: 0;
 }
+
 
 /* =========================
    Range Slider
@@ -185,6 +217,7 @@ textarea {
 
 #design-importance {
   width: 100%;
+
   height: 8px;
 
   border-radius: 5px;
@@ -192,18 +225,21 @@ textarea {
   accent-color: var(--text);
 }
 
+
 /* =========================
    Color Picker
    ========================= */
 
 input[type="color"] {
   width: 100%;
+
   height: 50px;
 
   padding: 0.25rem;
 
   cursor: pointer;
 }
+
 
 /* =========================
    File Upload
@@ -219,6 +255,7 @@ input[type="color"] {
 #project-file {
   cursor: pointer;
 }
+
 
 /* =========================
    Buttons
@@ -236,6 +273,7 @@ input[type="color"] {
 
 button {
   border: none;
+
   border-radius: 6px;
 
   padding: 0.8rem 2rem;
@@ -248,11 +286,13 @@ button {
 
 button[type="submit"] {
   background-color: var(--dark);
+
   color: white;
 }
 
 button[type="submit"]:hover {
   background-color: white;
+
   color: var(--dark);
 
   transition: 0.5s;
@@ -260,33 +300,40 @@ button[type="submit"]:hover {
 
 button[type="reset"] {
   background-color: white;
+
   color: var(--dark);
 }
 
 button[type="reset"]:hover {
   background-color: var(--dark);
+
   color: white;
 
   transition: 0.5s;
 }
+
 
 /* =========================
    Mobile
    ========================= */
 
 @media (max-width: 767px) {
+
   main {
     width: 92%;
+
     max-width: 100%;
   }
 
   form {
     width: 100%;
+
     max-width: 100%;
   }
 
   .content-grid {
     width: 100%;
+
     max-width: 100%;
 
     grid-template-columns: 1fr;
@@ -294,9 +341,31 @@ button[type="reset"]:hover {
 
   fieldset {
     width: 100%;
+
     max-width: 100%;
 
     padding: 1rem;
+  }
+
+  /*
+     Extra protection for iPhone/Safari
+     date and time controls.
+  */
+
+  input[type="date"],
+  input[type="time"],
+  input[type="datetime-local"] {
+    width: 100%;
+
+    max-width: 100%;
+
+    min-width: 0;
+
+    min-inline-size: 0;
+
+    box-sizing: border-box;
+
+    font-size: 16px;
   }
 
   .radio-group,
@@ -327,11 +396,13 @@ button[type="reset"]:hover {
   }
 }
 
+
 /* =========================
    Small Mobile
    ========================= */
 
 @media (max-width: 375px) {
+
   main {
     width: 94%;
   }
@@ -343,4 +414,5 @@ button[type="reset"]:hover {
   legend {
     font-size: 1.1rem;
   }
+
 }
