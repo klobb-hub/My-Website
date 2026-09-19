@@ -68,16 +68,23 @@ textarea {
 
 /* Date & time */
 
+/* Date & time */
+
 input[type="date"],
 input[type="time"],
 input[type="datetime-local"] {
   width: 100%;
-  min-width: 0;
+  max-width: 100%;
 
   box-sizing: border-box;
 
+  padding: 0.75rem;
+
   font-size: 16px;
-}
+
+  -webkit-appearance: none;
+  appearance: none;
+}}
 
 /* =========================
    Textarea
