@@ -19,6 +19,42 @@ html {
   scroll-behavior: smooth;
 }
 
+  main {
+    width: 95%;
+  }
+
+    header {
+    padding-inline: 1rem;
+  }
+
+  nav ul {
+    gap: 0.25rem;
+  }
+
+  nav a {
+    padding: 0.3rem 0.4rem;
+  }
+
+  .card,
+  .project {
+    padding: 1rem;
+  }
+
+  th,
+  td {
+    padding: 0.5rem;
+  }
+
+  .copyright {
+    width: 92%;
+  }
+
+  .footer-sections {
+    width: 92%;
+
+    gap: 1rem;
+  }
+
 body {
   margin: 0;
   font-family: Arial, sans-serif;
@@ -108,6 +144,13 @@ nav a {
 
   color: white;
   text-decoration: none;
+}
+
+nav a[aria-current="page"] {
+    color: var(--accent);
+    font-weight: bold;
+    text-decoration: underline;
+    text-underline-offset: 6px;
 }
 
 /* =========================
@@ -383,7 +426,7 @@ footer {
 .error-page h1 {
   font-size: 8rem;
   margin: 0;
-  color: var(--accent);
+  color: var(--dark);
 }
 
 .error-page h2 {
@@ -392,7 +435,7 @@ footer {
 }
 
 .error-page p {
-  color: var(--secondary-text);
+  color: var(--text);
   margin-bottom: 2rem;
 }
 
@@ -410,41 +453,7 @@ footer {
    ========================= */
 
 @media (max-width: 375px) {
-  main {
-    width: 95%;
-  }
 
-  header {
-    padding-inline: 1rem;
-  }
-
-  nav ul {
-    gap: 0.25rem;
-  }
-
-  nav a {
-    padding: 0.3rem 0.4rem;
-  }
-
-  .card,
-  .project {
-    padding: 1rem;
-  }
-
-  th,
-  td {
-    padding: 0.5rem;
-  }
-
-  .copyright {
-    width: 92%;
-  }
-
-  .footer-sections {
-    width: 92%;
-
-    gap: 1rem;
-  }
 }
 
 /* =========================
