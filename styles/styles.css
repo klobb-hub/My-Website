@@ -57,7 +57,7 @@ html {
 
 body {
   margin: 0;
-  font-family: Arial, sans-serif;
+  font-family: Arial, sans-serif, Arial, Helvetica, sans-serif;
   line-height: 1.6;
   color: var(--text);
   background: var(--background);
