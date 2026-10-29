@@ -1,0 +1,161 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Elias Povlsen | Memory Match</title>
+    <link rel="stylesheet" href="styles/styles.css" />
+    <link rel="stylesheet" href="styles/memory-match-styles.css" />
+  </head>
+  <body>
+    <header>
+      <a href="/" class="brand">
+        <img
+          src="img/eleous.png"
+          alt="Profile image of Elias Povlsen"
+          class="logo-elias"
+        />
+        <p><strong>Elias Povlsen</strong></p>
+      </a>
+
+      <nav aria-label="Main navigation">
+        <ul>
+          <li><a href="/" aria-current="page">Home</a></li>
+          <li><a href="portfolio.html">Portfolio</a></li>
+          <li><a href="interests.html">Interests</a></li>
+          <li><a href="cv.html">CV</a></li>
+          <li><a href="about.html">About</a></li>
+        </ul>
+      </nav>
+    </header>
+
+    <main>
+      <section class="intro">
+        <h1>🧠 Memory Match</h1>
+        <p>
+          Find all matching pairs as quickly as possible. Flip two cards at a
+          time, remember where each symbol is, and try to beat your personal
+          best.
+        </p>
+      </section>
+
+      <div class="game-layout">
+        <aside class="panel">
+          <h2>How to play</h2>
+          <ol class="how-to-play">
+            <li>Click a card to reveal it.</li>
+            <li>Click a second card.</li>
+            <li>If they match, they stay visible.</li>
+            <li>If they do not match, they are hidden again.</li>
+            <li>Find all 8 pairs to win.</li>
+          </ol>
+
+          <div class="stats">
+            <div class="stat"><span>Moves</span><span id="moves">0</span></div>
+            <div class="stat">
+              <span>Time</span><span id="time">00:00</span>
+            </div>
+            <div class="stat">
+              <span>Pairs</span><span id="pairs">0 / 8</span>
+            </div>
+            <div class="stat">
+              <span>Best moves</span><span id="bestMoves">—</span>
+            </div>
+            <div class="stat">
+              <span>Games played</span><span id="gamesPlayed">0</span>
+            </div>
+          </div>
+
+          <button id="newGame" type="button">New Game</button>
+        </aside>
+
+        <section class="game-panel">
+          <div id="board" class="board" aria-label="Memory game board"></div>
+          <p id="message" class="message" aria-live="polite"></p>
+        </section>
+      </div>
+
+      <p class="footer-note">
+        Your statistics and best score are saved automatically using
+        localStorage.
+      </p>
+    </main>
+    <script src="scripts/script.js"></script>
+
+    <footer>
+      <div class="footer-sections">
+        <div class="contact">
+          <p><strong>Contact Me</strong></p>
+
+          <p>
+            <a href="mailto:elias@povlsen.dev">
+              <img src="img/email.png" alt="email" />
+              elias@povlsen.dev
+            </a>
+          </p>
+
+          <p>
+            <span>
+              <img src="img/location.png" alt="location" />
+              Aabybro, Denmark
+            </span>
+          </p>
+        </div>
+
+        <div class="socials">
+          <p><strong>Find Me Online</strong></p>
+          <ul>
+            <li>
+              <a
+                href="https://instagram.com/eliaspovlsen"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                <img src="img/instagram.png" alt="" />
+                Instagram
+              </a>
+            </li>
+
+            <li>
+              <a
+                href="https://www.linkedin.com/in/elias-povlsen-b66466187/"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                <img src="img/linkedin.png" alt="" />
+                LinkedIn
+              </a>
+            </li>
+
+            <li>
+              <a
+                href="https://github.com/klobb-hub"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                <img src="img/github.png" alt="" />
+                GitHub
+              </a>
+            </li>
+          </ul>
+        </div>
+      </div>
+
+      <div>
+        <p class="copyright">
+          <small>&copy; 2026 Elias Povlsen. All Rights Reserved.</small>
+        </p>
+        <p class="css-validation">
+          <a
+            href="https://jigsaw.w3.org/css-validator/validator?lang=en&profile=css3svg&uri=povlsen.dev&usermedium=all&vextwarning=&warning=1"
+          >
+            <img
+              src="https://jigsaw.w3.org/css-validator/images/vcss-blue"
+              alt="Valid CSS!"
+            />
+          </a>
+        </p>
+      </div>
+    </footer>
+  </body>
+</html>
