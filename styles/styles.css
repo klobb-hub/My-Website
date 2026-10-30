@@ -19,41 +19,41 @@ html {
   scroll-behavior: smooth;
 }
 
-  main {
-    width: 95%;
-  }
+main {
+  width: 95%;
+}
 
-    header {
-    padding-inline: 1rem;
-  }
+header {
+  padding-inline: 1rem;
+}
 
-  nav ul {
-    gap: 0.25rem;
-  }
+nav ul {
+  gap: 0.25rem;
+}
 
-  nav a {
-    padding: 0.3rem 0.4rem;
-  }
+nav a {
+  padding: 0.3rem 0.4rem;
+}
 
-  .card,
-  .project {
-    padding: 1rem;
-  }
+.card,
+.project {
+  padding: 1rem;
+}
 
-  th,
-  td {
-    padding: 0.5rem;
-  }
+th,
+td {
+  padding: 0.5rem;
+}
 
-  .copyright {
-    width: 92%;
-  }
+.copyright {
+  width: 92%;
+}
 
-  .footer-sections {
-    width: 92%;
+.footer-sections {
+  width: 92%;
 
-    gap: 1rem;
-  }
+  gap: 1rem;
+}
 
 body {
   margin: 0;
@@ -147,10 +147,58 @@ nav a {
 }
 
 nav a[aria-current="page"] {
-    color: var(--accent);
-    font-weight: bold;
-    text-decoration: underline;
-    text-underline-offset: 6px;
+  color: var(--accent);
+  font-weight: bold;
+  text-decoration: underline;
+  text-underline-offset: 6px;
+}
+
+/* =========================
+   Responsive navigation
+   ========================= */
+
+/* Hamburger button is hidden on desktop */
+.menu-toggle {
+  display: none;
+  width: 44px;
+  height: 44px;
+  padding: 9px;  border: 0px;
+  border-radius: 0px;
+  background: transparent;
+  color: white;
+  cursor: pointer;
+}
+
+/* Three lines in the hamburger icon */
+.menu-toggle span {
+  display: block;
+  width: 100%;
+  height: 3px;
+  margin: 4px 0;
+  border-radius: 3px;
+  background: currentColor;
+  transition:
+    transform 0.2s ease,
+    opacity 0.2s ease;
+}
+
+/* Turn the hamburger into an X when open */
+.menu-toggle[aria-expanded="true"] span:first-child {
+  transform: translateY(7px) rotate(45deg);
+}
+
+.menu-toggle[aria-expanded="true"] span:nth-child(2) {
+  opacity: 0;
+}
+
+.menu-toggle[aria-expanded="true"] span:last-child {
+  transform: translateY(-7px) rotate(-45deg);
+}
+
+/* Keyboard focus */
+.menu-toggle:focus-visible {
+  outline: 2px solid var(--blue);
+  outline-offset: 3px;
 }
 
 /* =========================
@@ -448,12 +496,51 @@ footer {
   border-radius: 8px;
 }
 
-/* =========================
-   Small mobile - 375px
-   ========================= */
+@media (max-width: 767px) {
 
-@media (max-width: 375px) {
+  header.site-header {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: center;
+    gap: 0.5rem;
+    padding: 0.5rem 1rem;
+  }
 
+  .menu-toggle {
+    display: block;
+    flex-shrink: 0;
+  }
+
+  nav.main-navigation {
+    display: none;
+    flex-basis: 100%;
+    width: 100%;
+  }
+
+  nav.main-navigation.is-open {
+    display: block;
+  }
+
+  nav.main-navigation ul {
+    display: flex;
+    flex-direction: column;
+    align-items: stretch;
+    gap: 0;
+    width: 100%;
+    padding: 0.5rem 0;
+    margin: 0;
+  }
+
+  nav.main-navigation li {
+    width: 100%;
+  }
+
+  nav.main-navigation a {
+    display: block;
+    padding: 0.75rem 1rem;
+  }
 }
 
 /* =========================
@@ -525,5 +612,12 @@ footer {
 
   .content-grid {
     grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+/* Respect reduced-motion preferences */
+@media (prefers-reduced-motion: reduce) {
+  .menu-toggle span {
+    transition: none;
   }
 }
