@@ -295,10 +295,14 @@ function startGame() {
   }
 
   currentDifficulty = selectedDifficulty;
+  
+const level = levels[currentDifficulty];
 
-  const level = levels[currentDifficulty];
-  const activeSymbols = symbols.slice(0, level.pairs);
-  const shuffledCards = shuffle([...activeSymbols, ...activeSymbols]);
+// Randomly select the symbols for this game.
+const activeSymbols = shuffle(symbols).slice(0, level.pairs);
+
+// Create two cards for each selected symbol and shuffle them.
+const shuffledCards = shuffle([...activeSymbols, ...activeSymbols]);
 
   flippedCards = [];
   matchedPairs = 0;
