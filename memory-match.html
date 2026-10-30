@@ -59,6 +59,17 @@
           time, and try to finish in as few moves and as little time as
           possible. <strong>Have fun! :D</strong>
         </p>
+        
+        <h2>How to play</h2>
+
+          <ol class="how-to-play">
+            <li>Choose a difficulty to show the board.</li>
+            <li>Click a card to reveal its symbol.</li>
+            <li>Click a second card to look for a match.</li>
+            <li>Matching cards stay visible.</li>
+            <li>Mismatched cards turn back over.</li>
+            <li>Find all the pairs to win.</li>
+          </ol>
       </section>
 
       <section
@@ -84,17 +95,29 @@
       </section>
 
       <div class="game-layout">
-        <aside class="panel">
-          <h2>How to play</h2>
+        <section class="game-panel" aria-label="Memory Match game">
+          <div id="gamePlaceholder" class="game-placeholder">
+            <h2>Ready to play?</h2>
+            <p>Choose a difficulty above to start your game.</p>
+            <span class="placeholder-icon" aria-hidden="true">🃏</span>
+          </div>
 
-          <ol class="how-to-play">
-            <li>Choose a difficulty to show the board.</li>
-            <li>Click a card to reveal its symbol.</li>
-            <li>Click a second card to look for a match.</li>
-            <li>Matching cards stay visible.</li>
-            <li>Mismatched cards turn back over.</li>
-            <li>Find all the pairs to win.</li>
-          </ol>
+          <div
+            id="board"
+            class="board"
+            aria-label="Memory game board"
+            aria-describedby="message"
+            hidden
+          ></div>
+
+          <p id="message" class="message" aria-live="polite">
+            Choose a difficulty to begin.
+          </p>
+        </section>
+
+
+        <aside class="panel">
+          <h3>Scoreboard</h3>
 
           <div class="stats" aria-label="Current game statistics">
             <div class="stat">
@@ -128,26 +151,6 @@
             </div>
           </div>
         </aside>
-
-        <section class="game-panel" aria-label="Memory Match game">
-          <div id="gamePlaceholder" class="game-placeholder">
-            <h2>Ready to play?</h2>
-            <p>Choose a difficulty above to start your game.</p>
-            <span class="placeholder-icon" aria-hidden="true">🃏</span>
-          </div>
-
-          <div
-            id="board"
-            class="board"
-            aria-label="Memory game board"
-            aria-describedby="message"
-            hidden
-          ></div>
-
-          <p id="message" class="message" aria-live="polite">
-            Choose a difficulty to begin.
-          </p>
-        </section>
       </div>
 
       <p class="footer-note">

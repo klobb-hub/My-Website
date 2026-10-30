@@ -224,6 +224,11 @@ h2 {
   line-height: 1.2;
 }
 
+h3 {
+border: none;
+margin: 0;
+}
+
 /* =========================
    Cards and grids
    ========================= */
