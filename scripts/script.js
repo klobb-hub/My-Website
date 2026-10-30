@@ -513,7 +513,7 @@ function checkMatch() {
   }, 900);
 }
 
-// Finish the game and save the best result.
+/* Finish the game and save the best result. */
 function finishGame() {
   gameFinished = true;
   stopTimer();
@@ -539,15 +539,14 @@ function finishGame() {
 
   messageElement.className = "message win";
 
-  let resultMessage = `Nicely done! You did it with ${moves} moves in ${formatTime(seconds)}.`;
+  let resultMessage =
+    `Nicely done! You did it with ${moves} moves in ${formatTime(seconds)}.`;
 
-  if (isNewBestMoves & isNewBestTime) {
-     resultMessage += " New personal best time AND best moves!";
-  }
-  else if(isNewBestMoves) {
-     resultMessage += " New personal best moves!";
-  }
-  else if(isNewBestTime) {
+  if (isNewBestMoves && isNewBestTime) {
+    resultMessage += " New personal best time AND best moves!";
+  } else if (isNewBestMoves) {
+    resultMessage += " New personal best moves!";
+  } else if (isNewBestTime) {
     resultMessage += " New personal best time!";
   }
 
