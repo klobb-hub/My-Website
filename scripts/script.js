@@ -145,7 +145,7 @@ const levels = {
     columns: 4,
   },
   medium: {
-    pairs: 16,
+    pairs: 18,
     columns: 6,
   },
   hard: {
