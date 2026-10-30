@@ -225,7 +225,7 @@
   border-radius: 12px;
   backface-visibility: hidden;
   -webkit-backface-visibility: hidden;
-  font-size: clamp(1.3rem, 3.5vw, 2.5rem);
+ font-size: clamp(2rem, 5vw, 4rem);
 }
 
 .card-back {
@@ -294,6 +294,12 @@
   .board {
     max-width: 600px;
   }
+
+  .card-face {
+  border-radius: 8px;
+  border-width: 1px;
+  font-size: clamp(1.5rem, 7vw, 3rem);
+}
 }
 
 @media (max-width: 500px) {
@@ -308,12 +314,6 @@
 
   .board {
     gap: 6px;
-  }
-
-  .card-face {
-    border-radius: 8px;
-    border-width: 1px;
-    font-size: clamp(1rem, 5vw, 1.8rem);
   }
 
   .memory-card {
