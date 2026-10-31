@@ -178,8 +178,8 @@ nav a[aria-current="page"] {
   border-radius: 3px;
   background: currentColor;
   transition:
-    transform 0.2s ease,
-    opacity 0.2s ease;
+    transform 0.5s ease,
+    opacity 0.5s ease;
 }
 
 /* Turn the hamburger into an X when open */
