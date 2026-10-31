@@ -1,3 +1,4 @@
+
 /* ==================================================
    ELIAS POVLSEN — DARK DEVELOPER DESIGN SYSTEM
    ================================================== */
@@ -120,6 +121,7 @@ h4 {
   color: var(--heading);
   line-height: 1.2;
   letter-spacing: -0.035em;
+  text-wrap: balance;
 }
 
 h1 {
@@ -132,7 +134,7 @@ h2 {
 
 h3 {
   margin: 0;
-  font-size: 1.25rem;
+  font-size: clamp(1.4rem, 3vw, 1.8rem);
 }
 
 p {
@@ -141,6 +143,12 @@ p {
 
 section {
   margin-bottom: 4rem;
+}
+
+main > section > h2,
+main > section > h3 {
+  margin-top: 0;
+  margin-bottom: 1rem;
 }
 
 /* =========================
@@ -353,7 +361,12 @@ main {
   margin: 1rem 0;
 }
 
+.hero h1 + .hero-description {
+  margin-top: 1.25rem;
+}
+
 .hero-highlight {
+  display: block;
   color: var(--blue);
 }
 
@@ -676,10 +689,12 @@ footer {
 
 .css-validation {
   width: min(90%, 1100px);
-
   margin: 0.75rem auto 0;
-
   text-align: center;
+}
+
+footer > div:last-child {
+  width: 100%;
 }
 
 .css-validation img {
@@ -784,6 +799,8 @@ footer {
 
   nav.main-navigation.is-open {
     display: block;
+    flex-basis: 100%;
+    width: 100%;
   }
 
   nav.main-navigation ul {
