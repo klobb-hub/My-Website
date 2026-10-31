@@ -119,6 +119,7 @@ header {
   object-fit: cover;
 }
 
+
 /* =========================
    Navigation
    ========================= */
@@ -126,32 +127,53 @@ header {
 nav ul {
   display: flex;
   flex-wrap: wrap;
-
   justify-content: center;
-
   gap: 0.5rem;
-
   list-style: none;
-
   padding: 0;
   margin: 0;
 }
 
 nav a {
   display: block;
-
-  padding: 0.5rem 0.75rem;
+  padding: 0.45rem 0.8rem;
 
   color: white;
   text-decoration: none;
+  font-weight: 500;
+
+  border: 1px solid transparent;
+  border-radius: 7px;
+
+  transition:
+    color 250ms ease,
+    border-color 250ms ease,
+    background-color 250ms ease,
+    transform 250ms ease;
 }
 
-nav a[aria-current="page"] {
-  color: var(--accent);
-  font-weight: bold;
-  text-decoration: underline;
-  text-underline-offset: 6px;
+/* Hover animation */
+nav a:hover {
+  color: var(--blue);
+  border-color: var(--blue);
+  background-color: rgb(96 165 250 / 8%);
+  transform: translateY(-2px);
 }
+
+/* Active page */
+nav a[aria-current="page"] {
+  color: var(--blue);
+  border-color: var(--blue);
+  background-color: rgb(96 165 250 / 10%);
+  font-weight: 600;
+}
+
+/* Keyboard accessibility */
+nav a:focus-visible {
+  outline: 2px solid var(--blue);
+  outline-offset: 3px;
+}
+
 
 /* =========================
    Responsive navigation
@@ -178,8 +200,8 @@ nav a[aria-current="page"] {
   border-radius: 3px;
   background: currentColor;
   transition:
-    transform 0.5s ease,
-    opacity 0.5s ease;
+    transform 0.4s ease,
+    opacity 0.4s ease;
 }
 
 /* Turn the hamburger into an X when open */
@@ -624,5 +646,13 @@ footer {
 @media (prefers-reduced-motion: reduce) {
   .menu-toggle span {
     transition: none;
+  }
+
+    nav a {
+    transition: none;
+  }
+
+  nav a:hover {
+    transform: none;
   }
 }
