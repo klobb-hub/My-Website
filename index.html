@@ -3,81 +3,121 @@
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <meta
+      name="description"
+      content="Elias Povlsen's developer portfolio. Explore web development projects, programming skills and experience."
+    />
+
+    <meta name="theme-color" content="#0b1120" />
+
     <link rel="stylesheet" href="styles/styles.css" />
     <link rel="icon" type="image/png" href="img/favicon.png" />
+
     <title>Elias Povlsen | Home</title>
   </head>
+
   <body>
+    <header class="site-header">
+      <a href="/" class="brand">
+        <img
+          src="img/eleous.png"
+          alt=""
+          class="logo-elias"
+          width="44"
+          height="44"
+        />
+        <p><strong>Elias Povlsen</strong></p>
+      </a>
 
-<header class="site-header">
-  <a href="/" class="brand">
-    <img
-      src="img/eleous.png"
-      alt="Profile image of Elias Povlsen"
-      class="logo-elias"
-    />
-    <p><strong>Elias Povlsen</strong></p>
-  </a>
+      <button
+        class="menu-toggle"
+        type="button"
+        aria-label="Open navigation menu"
+        aria-expanded="false"
+        aria-controls="main-navigation"
+      >
+        <span></span>
+        <span></span>
+        <span></span>
+      </button>
 
-  <button
-    class="menu-toggle"
-    type="button"
-    aria-label="Open navigation menu"
-    aria-expanded="false"
-    aria-controls="main-navigation"
-  >
-    <span></span>
-    <span></span>
-    <span></span>
-  </button>
+      <nav
+        id="main-navigation"
+        class="main-navigation"
+        aria-label="Main navigation"
+      >
+        <ul>
+          <li>
+            <a href="/" aria-current="page">Home</a>
+          </li>
+          <li>
+            <a href="portfolio.html">Portfolio</a>
+          </li>
+          <li>
+            <a href="interests.html">Interests</a>
+          </li>
+          <li>
+            <a href="cv.html">CV</a>
+          </li>
+          <li>
+            <a href="about.html">About</a>
+          </li>
+        </ul>
+      </nav>
 
-  <nav
-    id="main-navigation"
-    class="main-navigation"
-    aria-label="Main navigation"
-  >
-    <ul>
-      <li><a href="/" aria-current="page">Home</a></li>
-      <li><a href="portfolio.html">Portfolio</a></li>
-      <li><a href="interests.html">Interests</a></li>
-      <li><a href="cv.html">CV</a></li>
-      <li><a href="about.html">About</a></li>
-    </ul>
-  </nav>
-  <script src="scripts/navigation.js" defer></script>
-</header>
+      <script src="scripts/navigation.js" defer></script>
+    </header>
 
     <main>
-      <section>
-        <h1>Hi, I'm Elias!</h1>
-        <p>
-          I'm a first-year <strong>Software Engineering Trainee</strong> student
-          at <strong>VIA University College</strong> in Horsens, Denmark
-          (studying online in 2026). I like turning messy ideas into working
-          code, drinking too much coffee, and playing lots of games during the
-          weekends!
+      <section class="hero">
+        <p class="hero-eyebrow">Software Engineering Trainee</p>
+
+        <h1>
+          Hi, I'm Elias.<br />
+          <span class="hero-highlight"> I build things for the web. </span>
+        </h1>
+
+        <p class="hero-description">
+          I'm a first-year Software Engineering Trainee student at VIA
+          University College in Horsens, Denmark. I enjoy turning ideas into
+          working code and learning how to build better digital experiences.
         </p>
+
+        <div class="hero-actions">
+          <a class="button button-primary" href="portfolio.html">
+            Explore my projects
+            <span aria-hidden="true">↗</span>
+          </a>
+
+          <a class="button button-secondary" href="about.html">
+            More about me
+          </a>
+        </div>
+
         <ul class="interests-list">
-          <li>🌐 Web Developer</li>
-          <li>🛠️ Workhorse</li>
-          <li>🎮 Gamer</li>
-          <li>☕ Java-noob</li>
-          <li>🍎 Apple expert</li>
+          <li>Web development</li>
+          <li>Problem solving</li>
+          <li>Java</li>
+          <li>Gaming</li>
         </ul>
       </section>
 
       <section>
         <h2>Quick Facts</h2>
+
         <table>
           <caption>
             A few things about me at a glance
           </caption>
+
           <thead>
             <tr>
-              <th>Category</th>
-              <th>Details</th>
+              <th scope="col">Category</th>
+              <th scope="col">Details</th>
             </tr>
           </thead>
+
           <tbody>
             <tr>
               <td>Studying</td>
@@ -101,9 +141,10 @@
 
       <section>
         <h2>Welcome to My Little Corner of the Web</h2>
+
         <p>
           This site was built as a class project to practice semantic HTML,
-          navigation, and basic page structure.
+          navigation, responsive design and basic programming concepts.
         </p>
       </section>
     </main>
@@ -115,14 +156,14 @@
 
           <p>
             <a href="mailto:elias@povlsen.dev">
-              <img src="img/email.png" alt="email" />
+              <img src="img/email.png" alt="" width="20" height="20" />
               elias@povlsen.dev
             </a>
           </p>
 
           <p>
             <span>
-              <img src="img/location.png" alt="location" />
+              <img src="img/location.png" alt="" width="20" height="20" />
               Aabybro, Denmark
             </span>
           </p>
@@ -130,6 +171,7 @@
 
         <div class="socials">
           <p><strong>Find Me Online</strong></p>
+
           <ul>
             <li>
               <a
@@ -137,7 +179,7 @@
                 target="_blank"
                 rel="noopener noreferrer"
               >
-                <img src="img/instagram.png" alt="" />
+                <img src="img/instagram.png" alt="" width="20" height="20" />
                 Instagram
               </a>
             </li>
@@ -148,7 +190,7 @@
                 target="_blank"
                 rel="noopener noreferrer"
               >
-                <img src="img/linkedin.png" alt="" />
+                <img src="img/linkedin.png" alt="" width="20" height="20" />
                 LinkedIn
               </a>
             </li>
@@ -159,7 +201,7 @@
                 target="_blank"
                 rel="noopener noreferrer"
               >
-                <img src="img/github.png" alt="" />
+                <img src="img/github.png" alt="" width="20" height="20" />
                 GitHub
               </a>
             </li>
@@ -169,8 +211,9 @@
 
       <div>
         <p class="copyright">
-          <small>&copy; 2026 Elias Povlsen. All Rights Reserved.</small>
+          <small> &copy; 2026 Elias Povlsen. All Rights Reserved. </small>
         </p>
+
         <p class="css-validation">
           <a
             href="https://jigsaw.w3.org/css-validator/validator?lang=en&profile=css3svg&uri=povlsen.dev&usermedium=all&vextwarning=&warning=1"
