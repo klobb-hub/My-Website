@@ -466,10 +466,13 @@
     gap: 0.3rem;
   }
 
-  .board[data-difficulty="medium"],
-  .board[data-difficulty="hard"] {
-    grid-template-columns: repeat(4, minmax(0, 1fr));
+  .board[data-difficulty="medium"] {
+    grid-template-columns: repeat(6, minmax(0, 1fr));
   }
+  
+    .board[data-difficulty="hard"] {
+    grid-template-columns: repeat(8, minmax(0, 1fr));
+  
 
   .memory-card,
   .card-face {
